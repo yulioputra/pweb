@@ -359,26 +359,19 @@
                 </div>
             </div>
 
-            <!-- Skrip Hitung Otomatis Bersih -->
+            <!-- Skrip Hitung Otomatis Versi Baru (Fresh Start) -->
             <script>
-                // Mengecek apakah pengunjung sudah pernah membuka web ini di browser mereka
-                let visits = localStorage.getItem('umkm_visitor_count');
+                // Menggunakan nama memori baru agar benar-benar bersih dari angka 28
+                let visits = localStorage.getItem('umkm_kuliner_visits_v2');
                 
                 if (!visits) {
-                    // Jika belum pernah, mulai dari angka 1
                     visits = 1;
                 } else {
-                    // Jika sudah pernah berkunjung sebelumnya, angka tetap
-                    // (Agar tidak menumpuk saat di-refresh sendiri)
                     visits = parseInt(visits);
                 }
                 
-                // Simpan kembali dan tampilkan ke layar
-                localStorage.setItem('umkm_visitor_count', visits);
+                localStorage.setItem('umkm_kuliner_visits_v2', visits);
                 document.getElementById('visitor-count').innerText = visits;
-
-                // Simulasi jika ada pengunjung baru lewat perangkat/tab berbeda (menambah 1)
-                // (Kamu bisa hapus komentar ini, sistem otomatis menghitung kunjungan unik)
             </script>
             
             <div class="copyright">
