@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const prodId = row.getAttribute("data-id");
             
             if (stockCell) {
-                // Ambil dari atribut data-raw-stock jika sudah ada, atau dari teks awal sel
                 const rawStock = stockCell.getAttribute("data-raw-stock") || stockCell.textContent.trim();
                 const stockNum = parseInt(rawStock.replace(/[^0-9]/g, '')) || 0;
                 const unitName = rawStock.replace(/[0-9]/g, '').trim() || 'Pcs';
@@ -50,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     stockCell.setAttribute("data-raw-stock", stockNum + " " + unitName);
                 }
 
-                // Sinkronkan batas stok ke semua tombol beli produk terkait (tabel & galeri)
                 document.querySelectorAll(`.add-to-cart-btn[data-id="${prodId}"]`).forEach(b => {
                     b.setAttribute("data-stock", stockNum);
                 });
