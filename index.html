@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katalog Kuliner & Jajanan UMKM</title>
+    <!-- Link File CSS Eksternal -->
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -35,6 +36,7 @@
                     <li><a href="#katalog-tabel">Daftar Menu</a></li>
                     <li><a href="#galeri">Menu Favorit</a></li>
                     <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="#" id="adminLoginNavBtn" class="admin-login-link"><i class="fa-solid fa-user-shield"></i> <span id="adminNavText">Login Admin</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -80,7 +82,7 @@
                         </thead>
                         <tbody>
                             <!-- PRODUK 1 -->
-                            <tr>
+                            <tr data-id="KLN-001" data-name="Risoles Mayo Melted (Isi 5)" data-price="25000" data-img="images/risoles.jpg">
                                 <td class="code-col">#KLN-001</td>
                                 <td>
                                     <div class="img-box-table">
@@ -95,14 +97,18 @@
                                     </div>
                                 </td>
                                 <td><span class="category-tag jajanan">Jajanan Pasar</span></td>
-                                <td class="price-cell">Rp 25.000</td>
-                                <td>30 Box</td>
-                                <td><span class="status-badge available"><i class="fa-solid fa-circle-check"></i> Ready Fresh</span></td>
-                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Risoles%20Mayo%20Melted%20(Rp%2025.000)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                                <td class="price-cell" data-price="25000">Rp 25.000</td>
+                                <td class="stock-cell">30 Box</td>
+                                <td><span class="status-badge"></span></td>
+                                <td class="action-cell">
+                                    <button class="btn-table-action add-to-cart-btn" data-id="KLN-001" data-name="Risoles Mayo Melted (Isi 5)" data-price="25000" data-img="images/risoles.jpg" title="Masukan Keranjang">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </td>
                             </tr>
 
                             <!-- PRODUK 2 -->
-                            <tr>
+                            <tr data-id="KLN-002" data-name="Kopi Tubruk Rempah Malabar" data-price="18000" data-img="images/kopi-tubruk.jpg">
                                 <td class="code-col">#KLN-002</td>
                                 <td>
                                     <div class="img-box-table">
@@ -117,14 +123,18 @@
                                     </div>
                                 </td>
                                 <td><span class="category-tag minuman">Minuman</span></td>
-                                <td class="price-cell">Rp 18.000</td>
-                                <td>15 Botol</td>
-                                <td><span class="status-badge available"><i class="fa-solid fa-circle-check"></i> Ready Fresh</span></td>
-                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Kopi%20Tubruk%20Rempah%20Malabar%20(Rp%2018.000)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                                <td class="price-cell" data-price="18000">Rp 18.000</td>
+                                <td class="stock-cell">15 Botol</td>
+                                <td><span class="status-badge"></span></td>
+                                <td class="action-cell">
+                                    <button class="btn-table-action add-to-cart-btn" data-id="KLN-002" data-name="Kopi Tubruk Rempah Malabar" data-price="18000" data-img="images/kopi-tubruk.jpg" title="Masukan Keranjang">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </td>
                             </tr>
 
                             <!-- PRODUK 3 -->
-                            <tr>
+                            <tr data-id="KLN-003" data-name="Keripik Singkong Pedas Manis" data-price="15000" data-img="images/keripik-singkong.jpg">
                                 <td class="code-col">#KLN-003</td>
                                 <td>
                                     <div class="img-box-table">
@@ -139,14 +149,18 @@
                                     </div>
                                 </td>
                                 <td><span class="category-tag cemilan">Cemilan</span></td>
-                                <td class="price-cell">Rp 15.000</td>
-                                <td>5 Bag</td>
-                                <td><span class="status-badge warning"><i class="fa-solid fa-triangle-exclamation"></i> Menipis</span></td>
-                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Keripik%20Singkong%20Pedas%20Manis%20(Rp%2015.000)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                                <td class="price-cell" data-price="15000">Rp 15.000</td>
+                                <td class="stock-cell">5 Bag</td>
+                                <td><span class="status-badge"></span></td>
+                                <td class="action-cell">
+                                    <button class="btn-table-action add-to-cart-btn" data-id="KLN-003" data-name="Keripik Singkong Pedas Manis" data-price="15000" data-img="images/keripik-singkong.jpg" title="Masukan Keranjang">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </td>
                             </tr>
 
                             <!-- PRODUK 4 -->
-                            <tr>
+                            <tr data-id="KLN-004" data-name="Pempek Pegandon (Promo)" data-price="31500" data-img="images/pempek.jpg">
                                 <td class="code-col">#KLN-004</td>
                                 <td>
                                     <div class="img-box-table">
@@ -161,14 +175,18 @@
                                     </div>
                                 </td>
                                 <td><span class="category-tag utama">Makanan Utama</span></td>
-                                <td class="price-cell">Rp 31.500 <small class="old-price-table">Rp 35.000</small></td>
-                                <td>12 Porsi</td>
-                                <td><span class="status-badge available"><i class="fa-solid fa-circle-check"></i> Ready Fresh</span></td>
-                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Pempek%20Pegandon%20(Promo%20Rp%2031.500)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                                <td class="price-cell" data-price="31500">Rp 31.500 <small class="old-price-table">Rp 35.000</small></td>
+                                <td class="stock-cell">12 Porsi</td>
+                                <td><span class="status-badge"></span></td>
+                                <td class="action-cell">
+                                    <button class="btn-table-action add-to-cart-btn" data-id="KLN-004" data-name="Pempek Pegandon (Promo)" data-price="31500" data-img="images/pempek.jpg" title="Masukan Keranjang">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </td>
                             </tr>
 
                             <!-- PRODUK 5 -->
-                            <tr>
+                            <tr data-id="KLN-005" data-name="Es Cendol Durian Nangka" data-price="20000" data-img="images/es-cendol.jpg">
                                 <td class="code-col">#KLN-005</td>
                                 <td>
                                     <div class="img-box-table">
@@ -183,14 +201,18 @@
                                     </div>
                                 </td>
                                 <td><span class="category-tag minuman">Minuman</span></td>
-                                <td class="price-cell">Rp 20.000</td>
-                                <td>0 Cup</td>
-                                <td><span class="status-badge outofstock"><i class="fa-solid fa-circle-xmark"></i> Habis</span></td>
-                                <td><span class="btn-table-action disabled"><i class="fa-solid fa-ban"></i></span></td>
+                                <td class="price-cell" data-price="20000">Rp 20.000</td>
+                                <td class="stock-cell">0 Cup</td>
+                                <td><span class="status-badge"></span></td>
+                                <td class="action-cell">
+                                    <button class="btn-table-action add-to-cart-btn" data-id="KLN-005" data-name="Es Cendol Durian Nangka" data-price="20000" data-img="images/es-cendol.jpg" title="Masukan Keranjang">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </td>
                             </tr>
 
                             <!-- PRODUK 6 -->
-                            <tr>
+                            <tr data-id="KLN-006" data-name="Kue Lumpur Surabi Kentang (Isi 4)" data-price="22000" data-img="images/kue-lumpur.jpg">
                                 <td class="code-col">#KLN-006</td>
                                 <td>
                                     <div class="img-box-table">
@@ -205,10 +227,14 @@
                                     </div>
                                 </td>
                                 <td><span class="category-tag jajanan">Jajanan Pasar</span></td>
-                                <td class="price-cell">Rp 22.000</td>
-                                <td>20 Box</td>
-                                <td><span class="status-badge available"><i class="fa-solid fa-circle-check"></i> Ready Fresh</span></td>
-                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Kue%20Lumpur%20Surabi%20Kentang%20(Rp%2022.000)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                                <td class="price-cell" data-price="22000">Rp 22.000</td>
+                                <td class="stock-cell">20 Box</td>
+                                <td><span class="status-badge"></span></td>
+                                <td class="action-cell">
+                                    <button class="btn-table-action add-to-cart-btn" data-id="KLN-006" data-name="Kue Lumpur Surabi Kentang (Isi 4)" data-price="22000" data-img="images/kue-lumpur.jpg" title="Masukan Keranjang">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -217,7 +243,7 @@
         </div>
     </section>
 
-    <!-- Section Card Showcase -->
+    <!-- Section Card Showcase / Menu Favorit -->
     <section id="galeri" class="section">
         <div class="container">
             <div class="section-header">
@@ -244,7 +270,7 @@
                             <div class="price-wrap">
                                 <span class="current-price">Rp 25.000</span>
                             </div>
-                            <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20membeli%20Risoles%20Mayo%20Melted%20dari%20Menu%20Favorit" target="_blank" class="btn-card-buy"><i class="fa-solid fa-cart-shopping"></i> Beli</a>
+                            <button class="btn-card-buy add-to-cart-btn" data-id="KLN-001" data-name="Risoles Mayo Melted (Isi 5)" data-price="25000" data-img="images/risoles.jpg"><i class="fa-solid fa-cart-shopping"></i> Beli</button>
                         </div>
                     </div>
                 </div>
@@ -266,7 +292,7 @@
                             <div class="price-wrap">
                                 <span class="current-price">Rp 18.000</span>
                             </div>
-                            <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20membeli%20Kopi%20Tubruk%20Rempah%20dari%20Menu%20Favorit" target="_blank" class="btn-card-buy"><i class="fa-solid fa-cart-shopping"></i> Beli</a>
+                            <button class="btn-card-buy add-to-cart-btn" data-id="KLN-002" data-name="Kopi Tubruk Rempah Malabar" data-price="18000" data-img="images/kopi-tubruk.jpg"><i class="fa-solid fa-cart-shopping"></i> Beli</button>
                         </div>
                     </div>
                 </div>
@@ -290,7 +316,7 @@
                                 <span class="old-price">Rp 35.000</span>
                                 <span class="current-price">Rp 31.500</span>
                             </div>
-                            <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20membeli%20Pempek%20Pegandon%20(Promo%20Rp%2031.500)" target="_blank" class="btn-card-buy"><i class="fa-solid fa-cart-shopping"></i> Beli</a>
+                            <button class="btn-card-buy add-to-cart-btn" data-id="KLN-004" data-name="Pempek Pegandon (Promo)" data-price="31500" data-img="images/pempek.jpg"><i class="fa-solid fa-cart-shopping"></i> Beli</button>
                         </div>
                     </div>
                 </div>
@@ -312,7 +338,7 @@
                             <div class="price-wrap">
                                 <span class="current-price">Rp 20.000</span>
                             </div>
-                            <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20membeli%20Es%20Cendol%20Durian%20dari%20Menu%20Favorit" target="_blank" class="btn-card-buy"><i class="fa-solid fa-cart-shopping"></i> Beli</a>
+                            <button class="btn-card-buy add-to-cart-btn" data-id="KLN-005" data-name="Es Cendol Durian Nangka" data-price="20000" data-img="images/es-cendol.jpg"><i class="fa-solid fa-cart-shopping"></i> Beli</button>
                         </div>
                     </div>
                 </div>
@@ -347,38 +373,59 @@
                 <a href="https://www.tiktok.com/@xirpl.bhaktipersada" class="social-btn tiktok" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
             </div>
 
-            <!-- Real-Time Clean Visitor Counter -->
-            <div class="visitor-counter" style="text-align: center; margin: 25px 0;">
-                <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 18px; border-radius: 9999px; backdrop-filter: blur(8px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);">
-                    <!-- Titik Indikator Live Hijau Menyala -->
-                    <span style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px #22c55e;"></span>
-                    
-                    <span style="font-size: 13px; color: #cbd5e1; font-family: 'Fira Code', monospace; letter-spacing: 0.5px;">
-                        Total Pengunjung: <span id="visitor-count" style="color: #6366f1; font-weight: 700;">1</span>
-                    </span>
-                </div>
+            <!-- Penghitung Jumlah Pengunjung -->
+            <div class="visitor-badge">
+                <i class="fa-solid fa-eye"></i> Total Pengunjung: <strong id="visitorCount">1</strong> Kali
             </div>
 
-            <!-- Skrip Hitung Otomatis Versi Baru (Fresh Start) -->
-            <script>
-                // Menggunakan nama memori baru agar benar-benar bersih dari angka 28
-                let visits = localStorage.getItem('umkm_kuliner_visits_v2');
-                
-                if (!visits) {
-                    visits = 1;
-                } else {
-                    visits = parseInt(visits);
-                }
-                
-                localStorage.setItem('umkm_kuliner_visits_v2', visits);
-                document.getElementById('visitor-count').innerText = visits;
-            </script>
-            
             <div class="copyright">
                 <p>&copy; 2026 <strong>UMKM Kuliner Nusantara</strong>. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating Cart Button -->
+    <button class="cart-float-btn" id="openCartBtn" title="Buka Keranjang Belanja">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-counter" id="cartCounter">0</span>
+    </button>
+
+    <!-- Cart Drawer Overlay -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+
+    <!-- Cart Drawer / Sidebar -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3><i class="fa-solid fa-basket-shopping"></i> Keranjang Belanja</h3>
+            <button class="close-cart-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-action-top">
+            <span>Ingin menambah menu lain?</span>
+            <button class="btn-add-more" id="addMoreItemsBtn"><i class="fa-solid fa-plus"></i> Tambah Belanjaan</button>
+        </div>
+        <div class="cart-drawer-body" id="cartDrawerBody">
+            <div class="cart-empty-state">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Keranjang belanjaan Anda masih kosong.</p>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Total Pembayaran:</span>
+                <span class="cart-total-price" id="cartTotalPrice">Rp 0</span>
+            </div>
+            <button class="btn-checkout disabled" id="checkoutWhatsappBtn">
+                <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Custom Dialog Modal -->
+    <div class="custom-dialog-overlay" id="customDialogOverlay">
+        <div class="custom-dialog" id="customDialogBox"></div>
+    </div>
+
+    <!-- Link File JavaScript Eksternal -->
+    <script src="script.js"></script>
 </body>
 </html>
