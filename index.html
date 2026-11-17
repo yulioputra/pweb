@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Kuliner & Jajanan UMKM</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Announcement -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <p><i class="fa-solid fa-utensils"></i> Promo Hari Ini: <strong>Diskon 20%</strong> Jajanan Nusantara!</p>
+            <div class="top-bar-links">
+                <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20bertanya%20tentang%20promo%20jajanan" target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat Admin</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navbar -->
+    <header class="navbar-section">
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                <div class="logo-text">Kuliner<span>Nusantara</span></div>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#beranda" class="active">Beranda</a></li>
+                    <li><a href="#katalog-tabel">Daftar Menu</a></li>
+                    <li><a href="#galeri">Menu Favorit</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="badge-hero"><i class="fa-solid fa-fire"></i> Cita Rasa Otentik UMKM</span>
+            <h1>Aneka Jajanan & Minuman<br><span>Khas Nusantara</span></h1>
+            <p>Nikmati kelezatan kue basah, jajanan pasar, cemilan renyah, dan minuman segar langsung buatan dapur lokal.</p>
+            <div class="hero-buttons">
+                <a href="#katalog-tabel" class="btn btn-primary"><i class="fa-solid fa-table-list"></i> Lihat Tabel Menu</a>
+                <a href="#galeri" class="btn btn-outline"><i class="fa-solid fa-cookie-bite"></i> Galeri Jajanan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Tabel Katalog -->
+    <section id="katalog-tabel" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Daftar Stok & Harga</span>
+                <h2>Katalog Produk Kuliner</h2>
+                <p>Geser tabel ke samping pada layar HP untuk melihat detail harga dan tombol pesan.</p>
+            </div>
+
+            <div class="table-card shadow-sm">
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Kode</th>
+                                <th>Foto</th>
+                                <th>Nama Kuliner / Jajanan</th>
+                                <th>Kategori</th>
+                                <th>Harga / Porsi</th>
+                                <th>Stok</th>
+                                <th>Status</th>
+                                <th>Pesan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- PRODUK 1 -->
+                            <tr>
+                                <td class="code-col">#KLN-001</td>
+                                <td>
+                                    <div class="img-box-table">
+                                        <img src="images/risoles.jpg" alt="Risoles Mayo" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/risoles.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                                        <div class="img-fallback"><i class="fa-solid fa-cookie"></i><span>Foto</span></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-name-cell">
+                                        <strong>Risoles Mayo Melted (Isi 5)</strong>
+                                        <small>Gurilem Isian Daging Smoked & Keju</small>
+                                    </div>
+                                </td>
+                                <td><span class="category-tag jajanan">Jajanan Pasar</span></td>
+                                <td class="price-cell">Rp 25.000</td>
+                                <td>30 Box</td>
+                                <td><span class="status-badge available"><i class="fa-solid fa-circle-check"></i> Ready Fresh</span></td>
+                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Risoles%20Mayo%20Melted%20(Rp%2025.000)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                            </tr>
+
+                            <!-- PRODUK 2 -->
+                            <tr>
+                                <td class="code-col">#KLN-002</td>
+                                <td>
+                                    <div class="img-box-table">
+                                        <img src="images/kopi-tubruk.jpg" alt="Kopi Tubruk" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/kopi-tubruk.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                                        <div class="img-fallback"><i class="fa-solid fa-mug-hot"></i><span>Foto</span></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-name-cell">
+                                        <strong>Kopi Tubruk Rempah Malabar</strong>
+                                        <small>Botol 500ml - Seduh Dingin / Panas</small>
+                                    </div>
+                                </td>
+                                <td><span class="category-tag minuman">Minuman</span></td>
+                                <td class="price-cell">Rp 18.000</td>
+                                <td>15 Botol</td>
+                                <td><span class="status-badge available"><i class="fa-solid fa-circle-check"></i> Ready Fresh</span></td>
+                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Kopi%20Tubruk%20Rempah%20Malabar%20(Rp%2018.000)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                            </tr>
+
+                            <!-- PRODUK 3 -->
+                            <tr>
+                                <td class="code-col">#KLN-003</td>
+                                <td>
+                                    <div class="img-box-table">
+                                        <img src="images/keripik-singkong.jpg" alt="Keripik Singkong" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/keripik-singkong.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                                        <div class="img-fallback"><i class="fa-solid fa-box-open"></i><span>Foto</span></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-name-cell">
+                                        <strong>Keripik Singkong Pedas Manis</strong>
+                                        <small>Netto 250g - Bumbu Balado Original</small>
+                                    </div>
+                                </td>
+                                <td><span class="category-tag cemilan">Cemilan</span></td>
+                                <td class="price-cell">Rp 15.000</td>
+                                <td>5 Bag</td>
+                                <td><span class="status-badge warning"><i class="fa-solid fa-triangle-exclamation"></i> Menipis</span></td>
+                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Keripik%20Singkong%20Pedas%20Manis%20(Rp%2015.000)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                            </tr>
+
+                            <!-- PRODUK 4 -->
+                            <tr>
+                                <td class="code-col">#KLN-004</td>
+                                <td>
+                                    <div class="img-box-table">
+                                        <img src="images/pempek.jpg" alt="Pempek Kapal Selam" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/pempek.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                                        <div class="img-fallback"><i class="fa-solid fa-bowl-rice"></i><span>Foto</span></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-name-cell">
+                                        <strong>Pempek Pegandon (Promo)</strong>
+                                        <small>Ikan Tenggiri Asli & Kuah Cuko</small>
+                                    </div>
+                                </td>
+                                <td><span class="category-tag utama">Makanan Utama</span></td>
+                                <td class="price-cell">Rp 31.500 <small class="old-price-table">Rp 35.000</small></td>
+                                <td>12 Porsi</td>
+                                <td><span class="status-badge available"><i class="fa-solid fa-circle-check"></i> Ready Fresh</span></td>
+                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Pempek%20Pegandon%20(Promo%20Rp%2031.500)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                            </tr>
+
+                            <!-- PRODUK 5 -->
+                            <tr>
+                                <td class="code-col">#KLN-005</td>
+                                <td>
+                                    <div class="img-box-table">
+                                        <img src="images/es-cendol.jpg" alt="Es Cendol" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/es-cendol.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                                        <div class="img-fallback"><i class="fa-solid fa-glass-water"></i><span>Foto</span></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-name-cell">
+                                        <strong>Es Cendol Durian Nangka</strong>
+                                        <small>Gula Aren Asli & Santan Murni</small>
+                                    </div>
+                                </td>
+                                <td><span class="category-tag minuman">Minuman</span></td>
+                                <td class="price-cell">Rp 20.000</td>
+                                <td>0 Cup</td>
+                                <td><span class="status-badge outofstock"><i class="fa-solid fa-circle-xmark"></i> Habis</span></td>
+                                <td><span class="btn-table-action disabled"><i class="fa-solid fa-ban"></i></span></td>
+                            </tr>
+
+                            <!-- PRODUK 6 -->
+                            <tr>
+                                <td class="code-col">#KLN-006</td>
+                                <td>
+                                    <div class="img-box-table">
+                                        <img src="images/kue-lumpur.jpg" alt="Kue Lumpur" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/kue-lumpur.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                                        <div class="img-fallback"><i class="fa-solid fa-cookie"></i><span>Foto</span></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-name-cell">
+                                        <strong>Kue Lumpur Surabi Kentang (Isi 4)</strong>
+                                        <small>Topping Kismis & Keju Parut</small>
+                                    </div>
+                                </td>
+                                <td><span class="category-tag jajanan">Jajanan Pasar</span></td>
+                                <td class="price-cell">Rp 22.000</td>
+                                <td>20 Box</td>
+                                <td><span class="status-badge available"><i class="fa-solid fa-circle-check"></i> Ready Fresh</span></td>
+                                <td><a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20memesan%20Kue%20Lumpur%20Surabi%20Kentang%20(Rp%2022.000)" target="_blank" class="btn-table-action" title="Pesan via WhatsApp"><i class="fa-solid fa-cart-plus"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Card Showcase -->
+    <section id="galeri" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Menu Favorit</span>
+                <h2>Rekomendasi Jajanan Terlaris</h2>
+            </div>
+            
+            <div class="card-grid">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="card-badge">Paling Laris</div>
+                    <div class="card-image">
+                        <img src="images/risoles.jpg" alt="Risoles Mayo" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/risoles.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                        <div class="img-fallback card-fallback"><i class="fa-solid fa-utensils"></i><span>Foto Risoles</span></div>
+                        <div class="card-overlay">
+                            <a href="#katalog-tabel" class="btn-quick-view">Lihat Detail</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Jajanan Pasar</span>
+                        <h3 class="card-title">Risoles Mayo Melted</h3>
+                        <p class="card-desc">Kulit renyah dengan isian telur, daging sapi asap, dan mayo gurih meleleh.</p>
+                        <div class="card-bottom">
+                            <div class="price-wrap">
+                                <span class="current-price">Rp 25.000</span>
+                            </div>
+                            <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20membeli%20Risoles%20Mayo%20Melted%20dari%20Menu%20Favorit" target="_blank" class="btn-card-buy"><i class="fa-solid fa-cart-shopping"></i> Beli</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="images/kopi-tubruk.jpg" alt="Kopi Tubruk" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/kopi-tubruk.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                        <div class="img-fallback card-fallback"><i class="fa-solid fa-mug-hot"></i><span>Foto Kopi</span></div>
+                        <div class="card-overlay">
+                            <a href="#katalog-tabel" class="btn-quick-view">Lihat Detail</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Minuman</span>
+                        <h3 class="card-title">Kopi Tubruk Rempah</h3>
+                        <p class="card-desc">Racikan biji kopi robusta pilihan dipadu kapulaga dan kayu manis khas Malang.</p>
+                        <div class="card-bottom">
+                            <div class="price-wrap">
+                                <span class="current-price">Rp 18.000</span>
+                            </div>
+                            <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20membeli%20Kopi%20Tubruk%20Rempah%20dari%20Menu%20Favorit" target="_blank" class="btn-card-buy"><i class="fa-solid fa-cart-shopping"></i> Beli</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="card-badge promo">Hemat 10%</div>
+                    <div class="card-image">
+                        <img src="images/pempek.jpg" alt="Pempek Pegandon" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/pempek.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                        <div class="img-fallback card-fallback"><i class="fa-solid fa-bowl-rice"></i><span>Foto Pempek</span></div>
+                        <div class="card-overlay">
+                            <a href="#katalog-tabel" class="btn-quick-view">Lihat Detail</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Makanan Utama</span>
+                        <h3 class="card-title">Pempek Pegandon</h3>
+                        <p class="card-desc">Ikan tenggiri asli dengan isian telur utuh dan kuah cuko kental pedas manis.</p>
+                        <div class="card-bottom">
+                            <div class="price-wrap">
+                                <span class="old-price">Rp 35.000</span>
+                                <span class="current-price">Rp 31.500</span>
+                            </div>
+                            <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20membeli%20Pempek%20Pegandon%20(Promo%20Rp%2031.500)" target="_blank" class="btn-card-buy"><i class="fa-solid fa-cart-shopping"></i> Beli</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="images/es-cendol.jpg" alt="Es Cendol" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='https://nurse-grin-ql608.hostmora.app/images/es-cendol.jpg';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                        <div class="img-fallback card-fallback"><i class="fa-solid fa-glass-water"></i><span>Foto Es Cendol</span></div>
+                        <div class="card-overlay">
+                            <a href="#katalog-tabel" class="btn-quick-view">Lihat Detail</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Minuman Segar</span>
+                        <h3 class="card-title">Es Cendol Durian</h3>
+                        <p class="card-desc">Cendol tepung beras suji asli dipadu toping daging durian murni dan nangka.</p>
+                        <div class="card-bottom">
+                            <div class="price-wrap">
+                                <span class="current-price">Rp 20.000</span>
+                            </div>
+                            <a href="https://wa.me/6285725752267?text=Halo,%20saya%20ingin%20membeli%20Es%20Cendol%20Durian%20dari%20Menu%20Favorit" target="_blank" class="btn-card-buy"><i class="fa-solid fa-cart-shopping"></i> Beli</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="footer">
+        <div class="container footer-content">
+            <div class="logo footer-logo">
+                <div class="logo-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                <div class="logo-text light">Kuliner<span>Nusantara</span></div>
+            </div>
+            <p class="footer-tagline">Menyajikan cita rasa otentik buatan UMKM lokal dengan kualitas rasa terjamin.</p>
+            
+            <!-- Tim Pembuat -->
+            <div class="team-credits">
+                <p><strong>Tim Pengembang Projek:</strong></p>
+                <div class="team-list">
+                    <span>1. Yulio Putra P.</span>
+                    <span class="dot">&bull;</span>
+                    <span>2. Maulla Febriansyah</span>
+                    <span class="dot">&bull;</span>
+                    <span>3. Maulana Dzaki A.</span>
+                </div>
+            </div>
+
+            <div class="social-hover-links">
+                <a href="https://wa.me/6285725752267" class="social-btn whatsapp" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/xirpl_bhepe" class="social-btn instagram" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@xirpl.bhaktipersada" class="social-btn tiktok" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 <strong>UMKM Kuliner Nusantara</strong>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
