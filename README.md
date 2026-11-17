@@ -2,10 +2,9 @@
 
 Projek website katalog kuliner interaktif buatan UMKM lokal berbasis HTML5 dan CSS3.
 
-## 👥 Tim Penyusun (Kelompok)
-1. **Yulio Putra P.**
-2. **Maulla Febriansyah**
-3. **Maulana Dzaki A.**
+## 👥 Penyusun
+**Yulio Putra P.**
+
 
 ---
 
