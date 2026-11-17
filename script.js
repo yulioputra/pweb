@@ -229,7 +229,7 @@ updateCartUI();
 processTableStocks();
 }
 ​function showConfirmationDialog(totalPrice, waUrl) {
-customDialogBox.innerHTML = <div class="custom-dialog-icon" style="color: #25d366;"><i class="fa-brands fa-whatsapp"></i></div> <h3>Konfirmasi Pesanan</h3> <p>Apakah Anda yakin akan membeli produk ini dengan total <strong>Rp ${totalPrice.toLocaleString('id-ID')}</strong>? Stok produk akan otomatis dikurangi dan keranjang dikosongkan setelah pesanan dikonfirmasi.</p> <div class="custom-dialog-buttons"> <button class="custom-dialog-btn btn-dialog-cancel" id="dialogCancelBtn">Cek Lagi</button> <a href="${waUrl}" target="_blank" class="custom-dialog-btn btn-dialog-whatsapp" id="dialogWhatsappBtn">Ya, Pesan Sekarang</a> </div>;
+customDialogBox.innerHTML = <div class="custom-dialog-icon" style="color: #25d366;"><i class="fa-brands fa-whatsapp"></i></div> <h3>Konfirmasi Pesanan</h3> <p>Apakah Anda yakin akan membeli produk ini dengan total <strong>Rp ${totalPrice.toLocaleString('id-ID')}</strong>? Stok produk akan otomatis dikurangi dan keranjang dikosongkan setelah pesanan dikonfirmasi.</p> <div class="custom-dialog-buttons"> <button class="custom-dialog-btn btn-dialog-cancel" id="dialogCancelBtn">Cek Lagi</button> <a href="${waUrl}" target="_blank" class="custom-dialog-btn btn-dialog-whatsapp" id="dialogWhatsappBtn" style="display:flex; align-items:center; justify-content:center; gap:5px;">Ya, Pesan Sekarang</a> </div>;
 customDialogOverlay.classList.add("active");
 ​document.getElementById("dialogCancelBtn").onclick = () => customDialogOverlay.classList.remove("active");
 document.getElementById("dialogWhatsappBtn").onclick = () => {
