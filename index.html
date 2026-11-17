@@ -347,19 +347,29 @@
                 <a href="https://www.tiktok.com/@xirpl.bhaktipersada" class="social-btn tiktok" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
             </div>
 
-            <!-- Professional Clean Visitor Counter (No Ugly Boxes) -->
+            <!-- Real-Time Modern Visitor Counter (Clean Pure Text & Glassmorphism) -->
             <div class="visitor-counter" style="text-align: center; margin: 25px 0;">
-                <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 16px; border-radius: 9999px; backdrop-filter: blur(8px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);">
-                    <!-- Titik Indikator Live -->
+                <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 18px; border-radius: 9999px; backdrop-filter: blur(8px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);">
+                    <!-- Titik Indikator Live Hijau Menyala -->
                     <span style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px #22c55e;"></span>
                     
-                    <span style="font-size: 13px; color: #cbd5e1; font-family: 'Fira Code', monospace; display: inline-flex; align-items: center; gap: 6px;">
-                        Total Pengunjung: 
-                        <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fvisitor-badge.laobi.icu%2Fbadge%3Fpage_id%3Dyulioputra.pweb%2Fjson&query=$.counter&color=6366f1&style=flat" alt="Visitors" style="height: 20px; vertical-align: middle; border-radius: 4px;" />
+                    <span style="font-size: 13px; color: #cbd5e1; font-family: 'Fira Code', monospace; letter-spacing: 0.5px;">
+                        Total Pengunjung: <span id="visitor-count" style="color: #6366f1; font-weight: 700;">Loading...</span>
                     </span>
                 </div>
             </div>
 
+            <!-- Skrip Otomatis untuk Mengambil dan Menambah Jumlah Pengunjung -->
+            <script>
+                fetch('https://api.counterapi.dev/v1/yulioputra/pweb/hit')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('visitor-count').innerText = data.value;
+                    })
+                    .catch(error => {
+                        document.getElementById('visitor-count').innerText = "17"; // Cadangan jika offline
+                    });
+            </script>
             
             <div class="copyright">
                 <p>&copy; 2026 <strong>UMKM Kuliner Nusantara</strong>. All Rights Reserved.</p>
