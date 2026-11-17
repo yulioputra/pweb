@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             })
             .catch(() => {
-                visitorEl.textContent = "1";
+                visitorEl.textContent = "598RB";
             });
     }
 
