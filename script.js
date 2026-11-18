@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. Penghitung Jumlah Pengunjung Nyata (CountAPI Publik + Fallback)
+    // 1. Penghitung Jumlah Pengunjung Nyata (Menggunakan CountAPI Publik + Fallback)
     const visitorEl = document.getElementById("visitorCount");
     if (visitorEl) {
         const hasVisitedSession = sessionStorage.getItem("umkm_session_visited");
@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     stockCell.setAttribute("data-raw-stock", stockNum + " " + unitName);
                 }
 
+                // Sinkronkan jumlah stok ke seluruh tombol beli (tabel & kartu)
                 document.querySelectorAll(`.add-to-cart-btn[data-id="${prodId}"]`).forEach(b => {
                     b.setAttribute("data-stock", stockNum);
                 });
@@ -88,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+        // Pasang event simpan stok jika admin login
         if (isAdminLoggedIn) {
             document.querySelectorAll(".save-stock-btn").forEach(btn => {
                 btn.addEventListener("click", function() {
@@ -130,10 +132,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // 4. Modal Dialog & Login Admin (dengan Show/Hide Password)
+    // 4. Elemen Dialog & Keranjang Belanja
     const customDialogOverlay = document.getElementById("customDialogOverlay");
     const customDialogBox = document.getElementById("customDialogBox");
 
+    // Login Admin Modal
     const adminLoginNavBtn = document.getElementById("adminLoginNavBtn");
     if (adminLoginNavBtn) {
         adminLoginNavBtn.addEventListener("click", function(e) {
@@ -204,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     updateAdminUIState();
 
-    // 5. Sistem Keranjang Belanja & Pengurangan Stok Otomatis
+    // 5. Sistem Keranjang Belanja Interaktif
     let cart = [];
 
     const openCartBtn = document.getElementById("openCartBtn");
@@ -284,41 +287,20 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }
 
-    // Mengurangi stok secara nyata dan mereset keranjang jadi 0 setelah checkout
-    function handleSuccessfulCheckout() {
-        cart.forEach(cartItem => {
-            const row = document.querySelector(`.data-table tr[data-id="${cartItem.id}"]`);
-            if (row) {
-                const stockCell = row.querySelector(".stock-cell");
-                const rawStock = stockCell.getAttribute("data-raw-stock") || stockCell.textContent.trim();
-                const currentStock = parseInt(rawStock.replace(/[^0-9]/g, '')) || 0;
-                const unitName = rawStock.replace(/[0-9]/g, '').trim() || 'Pcs';
-                
-                const newStock = Math.max(0, currentStock - cartItem.qty);
-                stockCell.setAttribute("data-raw-stock", newStock + " " + unitName);
-            }
-        });
-        
-        cart = [];
-        updateCartUI();
-        processTableStocks();
-    }
-
     function showConfirmationDialog(totalPrice, waUrl) {
         customDialogBox.innerHTML = `
             <div class="custom-dialog-icon" style="color: #25d366;"><i class="fa-brands fa-whatsapp"></i></div>
             <h3>Konfirmasi Pesanan</h3>
-            <p>Apakah Anda yakin akan membeli produk ini dengan total <strong>Rp ${totalPrice.toLocaleString('id-ID')}</strong>? Stok produk akan otomatis dikurangi dan keranjang dikosongkan setelah pesanan dikonfirmasi.</p>
+            <p>Apakah Anda yakin akan membeli produk ini dengan total <strong>Rp ${totalPrice.toLocaleString('id-ID')}</strong>? Anda akan diarahkan ke WhatsApp penjual.</p>
             <div class="custom-dialog-buttons">
                 <button class="custom-dialog-btn btn-dialog-cancel" id="dialogCancelBtn">Cek Lagi</button>
-                <a href="${waUrl}" target="_blank" class="custom-dialog-btn btn-dialog-whatsapp" id="dialogWhatsappBtn" style="display:flex; align-items:center; justify-content:center; gap:5px;">Ya, Pesan Sekarang</a>
+                <a href="${waUrl}" target="_blank" class="custom-dialog-btn btn-dialog-whatsapp" id="dialogWhatsappBtn" style="text-decoration:none; display:flex; align-items:center; justify-content:center; gap:5px;">Ya, Pesan Sekarang</a>
             </div>
         `;
         customDialogOverlay.classList.add("active");
 
         document.getElementById("dialogCancelBtn").onclick = () => customDialogOverlay.classList.remove("active");
         document.getElementById("dialogWhatsappBtn").onclick = () => {
-            handleSuccessfulCheckout();
             customDialogOverlay.classList.remove("active");
             toggleCart(false);
         };
